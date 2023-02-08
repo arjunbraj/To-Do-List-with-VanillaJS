@@ -1,4 +1,51 @@
 body{
     margin: 0;
     text-align: center;
+    background-color: aliceblue;
+}
+
+#container{
+    margin-top: 8%;
+    border: 2px solid crimson;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 25px;
+    border-radius: 30px;
+}
+
+#new-task{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#new-task div{
+    margin: 20px;
+}
+
+#new-task-txt{
+    width: 25rem;
+}
+
+#task-list{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#task-list div{
+    width: 30%;
+    border: 2px solid black;
+    padding-right: 20px;
+}
+
+#task-list li{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+#task-list div hr{
+    border-width: 2px;
 }

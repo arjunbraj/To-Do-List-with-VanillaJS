@@ -9,14 +9,24 @@
 </head>
 <body>
     <div id="container">
-        <div id="new-task">
-            <div><input type="text" placeholder="Enter your task"></div>
-            <div><button type="submit">ADD TASK</button></div>
+        <h1>TODO List</h1>
+        <div id="new-task">    
+            <div><input id="new-task-txt" type="text" placeholder="Enter your task" required></div>
+            <div><button>ADD TASK</button></div>
         </div>
         <div id="task-list">
-            <div id="incomplete-tasks"></div>
-            <div id="complete-tasks"></div>
+            <div>
+                <h3>TODO</h3>
+                <hr>
+                <ul id="incomplete-tasks"></ul>
+            </div>
+            <div>
+                <h3>Completed</h3>
+                <hr>
+                <ul id="complete-tasks"></ul>
+            </div>
         </div>
     </div>
+    <script src="./js/toDoList.js" type="text/javascript"></script>
 </body>
 </html>
