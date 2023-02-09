@@ -14,6 +14,7 @@ body{
     border-radius: 30px;
 }
 
+/* input task section */
 #new-task{
     display: flex;
     align-items: center;
@@ -28,6 +29,7 @@ body{
     width: 25rem;
 }
 
+/* list of tasks, completed and incomplete section */
 #task-list{
     display: flex;
     justify-content: center;
