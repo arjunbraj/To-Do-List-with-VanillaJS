@@ -5,10 +5,10 @@ const taskInput = document.getElementById('new-task-txt');
 const addBtn = document.getElementsByTagName('button')[0];
 
 // get the incomplete tasks div
-const incompleteTasksDiv = document.getElementById('incomplete-tasks');
+const incompleteTasksUl = document.getElementById('incomplete-tasks');
 
 // get the complete tasks div
-const completeTasksDiv = document.getElementById('complete-tasks');
+const completeTasksUl = document.getElementById('complete-tasks');
 
 // create a new task element
 const createNewTask = function(taskStr){
@@ -44,7 +44,7 @@ const addTask = function(){
     console.log('Adding Task ...');
     const listItem = createNewTask(taskInput.value);
     // add the list item to incomplete tasks div
-    incompleteTasksDiv.appendChild(listItem);
+    incompleteTasksUl.appendChild(listItem);
     bindTasks(listItem, taskCompleted);
     taskInput.value = '';
     count++;
@@ -69,7 +69,7 @@ const taskCompleted = function(){
     const listItem = this.parentNode;
     const label = listItem.getElementsByTagName('label')[0];
     label.style.textDecoration = 'line-through';
-    completeTasksDiv.appendChild(listItem);
+    completeTasksUl.appendChild(listItem);
     bindTasks(listItem, taskIncomplete);
 }
 
@@ -80,7 +80,7 @@ const taskIncomplete = function(){
     const listItem = this.parentNode;
     const label = listItem.getElementsByTagName('label')[0];
     label.style.textDecoration = 'none';
-    incompleteTasksDiv.appendChild(listItem);
+    incompleteTasksUl.appendChild(listItem);
     bindTasks(listItem, taskCompleted);
 }
 
