@@ -58,7 +58,7 @@ const deleteTask = function(){
     const listItem = this.parentNode;
     const ul = listItem.parentNode;
     ul.removeChild(listItem);
-    count --;
+    count--;
     countSpan.innerHTML = count;
 }
 
