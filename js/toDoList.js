@@ -35,6 +35,10 @@ const createNewTask = function(taskStr){
     return listItem;
 }
 
+// setting up count for tasks
+var count = 0;
+const countSpan = document.getElementById('count');
+
 // add new task
 const addTask = function(){
     console.log('Adding Task ...');
@@ -43,6 +47,8 @@ const addTask = function(){
     incompleteTasksDiv.appendChild(listItem);
     bindTasks(listItem, taskCompleted);
     taskInput.value = '';
+    count++;
+    countSpan.innerHTML = count;
 }
 
 // deleting a task
@@ -52,6 +58,8 @@ const deleteTask = function(){
     const listItem = this.parentNode;
     const ul = listItem.parentNode;
     ul.removeChild(listItem);
+    count --;
+    countSpan.innerHTML = count;
 }
 
 // mark task as complete
@@ -88,14 +96,4 @@ const bindTasks = function(taskListItem, checkBoxEventListener){
     deleteBtn.onclick = deleteTask;
     // checkbox event
     checkBox.onchange = checkBoxEventListener;
-}
-
-// cycle over incomplete tasks ul
-for(var i = 0; i < incompleteTasksDiv.children.length; i++){
-    bindTasks(incompleteTasksDiv.children[i], taskCompleted);
-}
-
-// cycle over completed tasks ul
-for(var i = 0; i < completeTasksDiv.children.length; i++){
-    bindTasks(completeTasksDiv.children[i], taskIncomplete);
 }
